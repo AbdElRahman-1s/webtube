@@ -20,14 +20,14 @@ const buttonStyles = cva(["hover:bg-secondary-hover","transition-colors"],{
 
 
 
-function Button({variant, size, children,className}: {
+function Button({variant, size, children,className,...props}: {
   variant?: "default" | "ghost", 
   size?: "default" | "icon",
   children: React.ReactNode,
   className?: string
-}) {
+} & React.ButtonHTMLAttributes<HTMLButtonElement>) {
   return (
-    <button className={twMerge(buttonStyles({variant, size}),className)}>
+    <button className={twMerge(buttonStyles({variant, size}),className)} {...props}>
       {children}
     </button>
   )
