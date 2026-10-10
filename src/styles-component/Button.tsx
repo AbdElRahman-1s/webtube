@@ -1,7 +1,7 @@
 import { cva } from 'class-variance-authority'
 import { twMerge } from 'tailwind-merge'
 
-const buttonStyles = cva(["hover:bg-secondary-hover","transition-colors"],{
+export const buttonStyles = cva(["hover:bg-secondary-hover","transition-colors"],{
   variants: {
     variant:{
       default: ["bg-secondary","hover:bg-secondary-hover"],
